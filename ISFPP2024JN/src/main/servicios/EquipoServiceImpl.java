@@ -1,0 +1,38 @@
+package main.servicios;
+
+import java.util.TreeMap;
+
+import main.modelo.Equipo;
+import main.dao.EquipoDAO;
+import main.dao.secuencial.EquipoSecuencialDAO;
+
+public class EquipoServiceImpl implements EquipoService{
+	
+	private EquipoDAO equipoDAO;
+	
+	public EquipoServiceImpl(){
+		equipoDAO = new EquipoSecuencialDAO();
+	}
+	@Override
+	public void insertar(Equipo equipo) {
+		equipoDAO.insertar(equipo);				
+	}
+
+	@Override
+	public void actualizar(Equipo equipo, Equipo equipoModificado) {
+		equipoDAO.actualizar(equipo,equipoModificado);						
+	}
+
+	@Override
+	public void borrar(Equipo equipo) {
+		equipoDAO.borrar(equipo);
+		
+	}
+
+	@Override
+	public TreeMap<String,Equipo> buscarTodos() {
+		return equipoDAO.buscarTodos();
+		
+	}
+
+}

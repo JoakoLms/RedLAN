@@ -1,0 +1,7 @@
+package main.excepciones;
+
+public class ConexionInexistenteException extends Exception {
+	public ConexionInexistenteException(String msg) {
+		super(msg);
+	}
+}
