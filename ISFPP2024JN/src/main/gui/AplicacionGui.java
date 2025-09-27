@@ -45,8 +45,8 @@ public class AplicacionGui extends JFrame {
 
 	private static final Color NEON_GREEN = new Color(57, 255, 20);
 	private static final Color NEON_GRAY = new Color(30, 30, 30);
-	private static final int ANCHO = 1200;
-	private static final int ALTO = 1000;
+	private static final int ANCHO = 1000;
+	private static final int ALTO = 600;
 
 	public AplicacionGui(Coordinador coordinador) {
 		this.coordinador = coordinador;
